@@ -1,3 +1,14 @@
 .header {
-  
+  &__inner {
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.355em 4.5em;
+    text-align: center;
+  }
+
+  &__text {
+    max-width: 61%;
+    margin: 0;
+    font-weight: 600;
+  }
 }
