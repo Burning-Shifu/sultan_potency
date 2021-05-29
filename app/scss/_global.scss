@@ -38,6 +38,10 @@ body {
   max-width: 1310px;
   margin: 0 auto;
   padding: 0 0.625em;
+
+  &--wide {
+    max-width: 1400px;
+  }
 }
 
 .d-flex {
