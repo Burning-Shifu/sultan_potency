@@ -1,8 +1,29 @@
 .hero {
+  position: relative;
   padding: 0.835em 0 1.125em;  /* 20px 0  27px */
   background-color: $dark;
+  background-image: url(../../img/bg/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  z-index: 0;
+
+  &::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    background: 
+        linear-gradient(167.33deg, #1D0707 10.84%, rgba(0, 0, 0, 0) 29.25%), 
+        linear-gradient(74.44deg, #1D0707 12.54%, rgba(0, 0, 0, 0) 40.09%), 
+        linear-gradient(89.58deg, #1D0707 1.37%, rgba(0, 0, 0, 0) 30.77%);
+    z-index: -1;
+  }
 
   &__inner {
+    z-index: 1;
   }
 
   &__title {

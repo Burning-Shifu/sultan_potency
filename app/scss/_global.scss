@@ -50,6 +50,10 @@ body {
   list-style: none;
 }
 
+.bold {
+  font-weight: 600;
+}
+
 a {
   text-decoration: none;
   outline: transparent;
@@ -78,4 +82,13 @@ svg path {
   border: none;
   border-radius: 10px;
   cursor: pointer;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.5em; /* 36px */
+  line-height: 1.222; /* 44px; */
+  color: $text;
+  text-align: center;
 }
