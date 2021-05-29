@@ -1,62 +1,116 @@
 .form {
+  max-width: 356px;
+  height: fit-content;
+  margin-bottom: 10px;
+  padding: 1.25em;
+  background-color: $white;
+  box-shadow: 0px 4px 50px rgba(136, 136, 136, 0.25);
+  border-radius: 15px;
+
+  &__heading {
+    margin: 0;
+    font-size: 0.75em; /* 18px */
+    line-height: 1.223;  /* 22px */
+    text-align: center;
+
+    &--bold {
+      font-weight: 600;
+    }
+  }
+
+  &__timer {
+    justify-content: center;
+    margin-top: 7px;
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 0.5em; /* 12px */
+    line-height: 1.25; /* 15px */
+  }
+
+  &__timer-block {
+    margin-right: 27px;
+
+    &:last-child {
+      margin-right: 0;
+
+      .form__timer-num {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__timer-num {
+    position: relative;
+    display: block;
+    width: fit-content;
+    padding: 0.5em 0.96rem;
+    cursor: auto;
+
+    &::after {
+      content: ":";
+      position: absolute;
+      right: -15px;
+      color: $black;
+    }
+  }
+
+  &__timer-text {
+    display: block;
+    margin-top: 7px;
+    text-align: center;
+  }
 
   &__label {
-    
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 400;
   }
 
   &__input {
-    
+    $grey: #eaeaec;
+
+    display: block;
+    width: 100%;
+    margin-bottom: 23px;
+    padding: 0.53em 0.833em;
+    font-size: 0.75em; /* 18px */
+    line-height: 1.223;  /* 22px */
+    background-color: $grey;
+    border: none;
+    border-radius: 10px;
+    outline: transparent;
+    transition: background-color 0.3s, box-shadow 0.5s;
+
+    &::placeholder {
+      color: #bebebe;
+    }
 
     &:hover {
-      
+      box-shadow: 0 0 3px 5px $grey;
     }
 
     &:focus {
-      
+      background-color: darken($grey, 3);
     }
   }
 
-  &__check-wrapper {
-    position: relative;
-    margin-bottom: 25px;
+  &__btn {
+    margin: 0 14px 5px;
+    padding: 0.87em 1.2em;
+    white-space: normal;
   }
 
-  &__check-input {
-    position: absolute;
-    width: 100%;
-    height: 30px;
-    opacity: 0;
-    z-index: 1;
-    cursor: pointer;
-
-    &:checked + .form__check::after {
-      display: block;
-    }
+  &__text-isleft {
+    max-width: 75%;
+    font-weight: 400;
   }
 
-  &__check {
-    flex-shrink: 0;
-    position: relative;
-    display: inline-block;
-    margin-right: 15px;
-    width: 18px;
-    height: 18px;
-    // background-color: $grey;
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: 4px;
-      left: 4px;
-      display: none;
-      width: 12px;
-      height: 9px;
-      background-image: url(../../img/ico/check.svg);
-      background-repeat: no-repeat;
-    }
-  }
 
-  &__check-label {
-    line-height: 1.3em;
-  }
+
 }

@@ -11,7 +11,7 @@
         Секрет турецких правителей доступен и в наши дни
       </p>
       <div class="hero__bottom d-flex">
-        <div class="hero__pros">
+        <div class="hero__pros d-flex">
           <ul class="hero__list indent-0">
             <li class="hero__list-item d-flex">
               Юношеская активность в постели
@@ -34,7 +34,42 @@
             <img class="hero__img" src="img/prod_tabs.png" alt='Упаковка препарата "Сила султана"'>
      
         </div>
-        <form class="form" method="POST"></form>
+        <form class="form" method="POST">
+          <p class="form__heading">
+            Успей получить 
+            <span class="form__heading--bold">Силу Султана бесплатно*</span>
+            , пока действует акция
+          </p>
+          <span class="form__text">Акция* закончится через</span>
+          <div class="form__timer d-flex">
+            <div class="form__timer-block">
+              <span class="form__timer-num btn">01</span>
+              <span class="form__timer-text form__text">Часов</span>
+            </div>
+            <div class="form__timer-block">
+              <span class="form__timer-num btn">07</span>
+              <span class="form__timer-text form__text">Минут</span>
+            </div>
+            <div class="form__timer-block">
+              <span class="form__timer-num btn">25</span>
+              <span class="form__timer-text form__text">Секунд</span>
+            </div>
+          </div>
+
+          <label class="form__label form__text" for="name">Ваше имя*</label>
+          <input class="form__input" type="text" id="name">
+          
+          <label class="form__label form__text" for="phone">Контактный телефон*</label>
+          <input class="form__input" type="text" id="phone" placeholder="+ (7)">
+
+          <button class="btn form__btn" type="submit">
+            Заказать препарат *бесплатно
+          </button>
+
+          <span class="form__text">*при заказе курса</span>
+          <div class="form__text form__text-isleft">Осталось всего 23 бесплатных упаковок</div>
+          
+        </form>
       </div>
       
 

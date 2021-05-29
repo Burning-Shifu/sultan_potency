@@ -17,7 +17,7 @@ body {
 body {
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 1em; /* 24px */
-  line-height: 1.22em; /* 29.28px */
+  line-height: 1.21em; /* 29px */
   font-weight: 400;
   font-style: normal;
   color: $black;
@@ -63,16 +63,12 @@ svg path {
 
 ///
 
-.title {
-
-}
-
 .btn {
   height: fit-content;
-  padding: 1em 2rem;
+  padding: 1.05em 2.17rem;
   font-weight: 700;
-  font-size: 0.75em;
-  line-height: 1.22;
+  font-size: 0.75em;  /* 18px */
+  line-height: 1.22; /* 22px */
   color: $white;
   text-align: center;
   text-transform: uppercase;
@@ -81,4 +77,5 @@ svg path {
   background-image: linear-gradient(180deg, #F42C2B 0%, rgba(0, 0, 0, 0) 100%);
   border: none;
   border-radius: 10px;
+  cursor: pointer;
 }
