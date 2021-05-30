@@ -36,8 +36,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    border-radius: 20px;
-    box-shadow: 0 0 16px 1px rgb(255 255 255 / 46%);
+    border-radius: 20px; 
+    box-shadow: 0 0 16px 1px rgba(255, 255, 255, 0.46);
     z-index: 0;
 
     &::after {

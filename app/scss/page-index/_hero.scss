@@ -56,8 +56,8 @@
   &__pros {
     margin-top: 12px;
     padding-right: 80px;
-    background-image: url(../../img/bg/circles.png);
-    background-repeat: no-repeat;
+    background-image: url(../../img/bg/big-and-small-circles.png);
+    // background-repeat: no-repeat;
     background-position: 110% top;
   }
 
@@ -66,14 +66,13 @@
   }
   
   &__list-item {
-    position: relative;
-    align-items: center;
-    max-width: 280px;
-    max-width: 11.8em;
-    margin-left: auto;
+    // position: relative;
+    // align-items: center;
+    max-width: 11.8em; /* 280px; */
+    // margin-left: auto;
     margin-bottom: 1.1em;
-    color: $white;
-    font-weight: 600;
+    // color: $white;
+    // font-weight: 600;
 
     &--wide {
       max-width: 380px;
@@ -99,27 +98,26 @@
   }
   
   &__check {
-    position: relative;
-    flex-shrink: 0;
-    width: 94px;
-    height: 74px;
+  //   position: relative;
+  //   flex-shrink: 0;
+  //   width: 94px;
+  //   height: 74px;
     margin-left: 25px;
-    background-image: url(../../img/icons/rectangle-for-check.png);
+  //   background-image: url(../../img/icons/rectangle-for-check.png);
 
-    &::after {
-      content: "";
-      position: absolute;
-      right: 10px;
-      top: 9px;
-      width:48px;
-      height: 41.47px;
-      background-image: url(../../img/icons/check.svg);
-      background-repeat: no-repeat;
-    }
+  //   &::after {
+  //     content: "";
+  //     position: absolute;
+  //     right: 10px;
+  //     top: 9px;
+  //     width:48px;
+  //     height: 41.47px;
+  //     background-image: url(../../img/icons/check.svg);
+  //     background-repeat: no-repeat;
+  //   }
   }
 
-  &__img {
-    
+  &__img {    
     margin-top: 27%;
     margin-left: 48px;
   }

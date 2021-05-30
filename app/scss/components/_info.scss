@@ -1,0 +1,29 @@
+.info {
+
+  &__title {
+    max-width: 60%;
+    margin: 0 auto 1.44em; /* 51.84px */
+  }
+
+  &__inner {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: 99% 0%, right 40%;
+    background-size: 50%;
+  }
+
+  &__content {
+    max-width: 45%;
+    padding: 1.8em 0 2.52em; /* 43.2px 0 60.48px */
+    color: $text;
+  }
+
+  &__text {
+    margin-top: 0;
+    margin-bottom: 1.2em; /* 28.8px */
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

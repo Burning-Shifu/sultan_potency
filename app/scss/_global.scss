@@ -96,3 +96,36 @@ svg path {
   color: $text;
   text-align: center;
 }
+
+.pros {
+  background-repeat: no-repeat;
+
+  &__list {}
+
+  &__item {
+    position: relative;
+    align-items: center;
+    margin-left: auto;
+    color: $white;
+    font-weight: 600;
+  }
+  
+  &__check {
+    position: relative;
+    flex-shrink: 0;
+    width: 94px;
+    height: 74px;
+    background-image: url(../../img/icons/rectangle-for-check.png);
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 10px;
+      top: 9px;
+      width:48px;
+      height: 41.47px;
+      background-image: url(../../img/icons/check.svg);
+      background-repeat: no-repeat;
+    }
+  }
+}

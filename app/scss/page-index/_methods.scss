@@ -1,0 +1,115 @@
+.methods {
+  padding: 0.75em 1.67em;
+
+  &__top {
+    margin-bottom: 0.75em;
+  }
+
+  &__text {
+    text-align: center;
+  }
+
+  &__top-img {
+    width: 140px;
+    margin: 0 70px;
+  }
+
+  &__inner {
+    padding: 0.875em 1.42em; /* 21px 34px */
+    background-color: $dark-red;
+    border-radius: 15px;
+  }
+
+  &__content {
+    padding: 1.42em 1.17em; /* 34px 28px */
+    border: 2px solid $white;
+    border-radius: 15px;
+  }
+
+  &__title {
+    max-width: 16em;
+    margin: 0 auto 0.6em;
+    font-weight: 800;
+    color: $white;
+  }
+  
+  &__title--bald {
+    font-weight: 900;
+  }
+  
+  &__pros {
+    justify-content: center;
+    background-image: url(../../img/bg/big-circles__cr.png);
+    background-position: center;
+  }
+  
+  &__list {
+    
+    &--left {
+      margin-top: 37px;
+
+      .methods__item {
+
+        &:first-child {
+          right: -65px;
+          margin-bottom: 85px;
+        }
+    
+        &:nth-child(2) {
+          right: 10px;
+          margin-bottom: 90px;
+        }
+        
+        &:last-child {
+          right: -105px;
+        }
+      }
+    }
+
+    &--right {
+      margin-top: 50px;
+
+      .methods__item {
+        margin-left: 0;
+
+        &:first-child {
+          right: 78px;
+          margin-bottom: 107px;
+        }
+    
+        &:nth-child(2) {
+          margin-bottom: 112px;
+        }
+        
+        &:last-child {
+          right: 122px;
+        }
+      }
+
+      .pros__check {
+        margin-right: 50px;
+        margin-left: 0;
+      }
+    }
+  }
+  
+  &__item {
+    max-width: 13em; /* 312px; */
+
+    &--wide {
+      max-width: 15em; /* 360px; */
+    }
+
+    
+
+  }
+  
+  &__img {
+    margin-top: 41%;
+    margin-right: 22px;
+  }
+}
+
+
+
+
