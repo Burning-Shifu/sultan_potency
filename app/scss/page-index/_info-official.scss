@@ -1,0 +1,13 @@
+.info-official {
+  background-color: $yellow;
+
+  &__inner {
+    background-image: linear-gradient(270.78deg, #F8C67D 9.07%, rgba(255, 255, 255, 0) 60.25%),
+    url(../../img/bg/official-bg.jpg);
+    background-position:1% 0%, left 40%;
+  }
+
+  &__content {
+    margin-left: auto;
+  }
+}

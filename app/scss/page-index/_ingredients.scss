@@ -1,0 +1,135 @@
+.ingredients {
+  padding: 2.25em 0 1.9em;
+  background-image: url(../../img/bg/order-bg.png), url(../../img/bg/deco.png) ,url(../../img/bg/ingr-bg.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 0%, 50%, 100%;
+  background-size: auto, auto, 100%;
+  
+  &__inner {
+  }
+
+  &__top {
+    justify-content: space-between;
+    margin-bottom: 1.9em;
+  }
+  
+  &__top-content {
+    max-width: 17.5em;
+    margin-left: 68px;
+    text-align: center;
+  }
+
+  &__top-text {
+    font-weight: 600;
+    color: $white;
+  }
+
+  &__top-img {
+    width: 170px;
+    margin-top: 44px;
+  }
+  
+  &__mid-text {
+    max-width: 22.6em;
+    margin: 0 auto;
+    color: $text;
+    text-align: center;
+  }
+
+  &__mid-text--bold {
+    font-weight: 900;
+  }
+
+  &__list {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 84px;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-width: calc(100% / 2 - 10px);
+    margin-bottom: 24px;
+    padding: 1.25em 1.5em 1.25em 2.25em; /* 30px 36px 30px 54px */
+    background-color: $white;
+    box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 8.67em;  /* 208px */
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &--zhen-shen {
+      &::after {
+        top: -70px;
+        right: -34px;
+        width: 11.46em;  /* 275px */
+        background-image: url(../../img/ingredients/zhen-shen.png);
+      }
+    }
+
+    &--muir {
+      &::after {
+        top: -38px;
+        right: -39px;
+        width: 13.3em;  /* 320px */
+        background-image: url(../../img/ingredients/herbs-raw-muira-puama.png);
+      }
+    }
+
+    &--evrikoma {
+      &::after {
+        top: -30px;
+        right: -52px;
+        width: 12.75em;  /* 306px */
+        background-image: url(../../img/ingredients/evrikoma.png);
+      }
+      }
+
+    &--asaya {
+
+      &::after {
+        top: -50px;
+        right: -13px;
+        width: 9em;  /* 217px */
+        background-image: url(../../img/ingredients/acai-berry.png);
+      }
+
+      .ingredients__item-title {
+        white-space: pre-line;
+      }
+    }
+  }
+
+  &__item-title {
+    display: inline-block;
+    max-width: 70%;
+    font-weight: 700;
+    font-size: 1.25em;  /* 30px */
+    line-height: 1.23;  /* 37px */
+    text-transform: uppercase;
+    color: $red;
+  }
+
+  &__item-descr {
+    margin-top: 0.7em;
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 0.75em; /* 18px */
+    line-height: 1.22;  /* 22px */
+    color: #212121;
+  }
+
+  .form {
+    margin-right: 9em;
+    margin-bottom: 0;
+  }
+}
