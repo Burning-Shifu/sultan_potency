@@ -107,6 +107,10 @@ svg path {
   line-height: 1.222; /* 44px; */
   color: $text;
   text-align: center;
+
+  @include phone {
+    font-size: 1.28em;
+  }
 }
 
 .pros {

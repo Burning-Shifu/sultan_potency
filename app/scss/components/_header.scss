@@ -24,6 +24,9 @@
   }
 
   &__btn {
-    width: 100%;
+
+    @include phone {
+      width: 100%;
+    }
   }
 }

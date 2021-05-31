@@ -1,21 +1,40 @@
 .info {
-
+  
   &__title {
     max-width: 60%;
     margin: 0 auto 1.44em; /* 51.84px */
+    
+    @include tablet {
+      max-width: 100%;
+    }
   }
-
+  
   &__inner {
     position: relative;
-    background-repeat: no-repeat;
-    background-position: 99% 0%, right 40%;
-    background-size: 50%;
+    height: 365px;
+     
+    @include tablet {
+		  display: flex;
+      flex-direction: column-reverse;
+      height: unset;
+    }
+  }
+
+  &__content-wrapper {
+    height: inherit;
   }
 
   &__content {
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
     max-width: 45%;
     padding: 1.8em 0 2.52em; /* 43.2px 0 60.48px */
     color: $text;
+
+    @include tablet {
+      max-width: 100%;
+    }
   }
 
   &__text {
@@ -24,6 +43,24 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 47%;
+
+    background-repeat: no-repeat;
+    background-position: 99% 0%, center 55%;
+
+    @include tablet {
+		  position: relative;
+      left: 0;
+      height: 365px;
+      background-size: cover;
     }
   }
 }

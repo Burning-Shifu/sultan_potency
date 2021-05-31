@@ -10,9 +10,6 @@ $dark-red: #420707;
 
 
 // Адаптив /// 
-// @mixin phone {
-//   @media (max-width: 400px) { @content; }
-// }
 
 @mixin phone {
   @media (max-width: 600px) { @content; }
