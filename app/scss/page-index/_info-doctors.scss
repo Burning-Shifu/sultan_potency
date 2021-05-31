@@ -1,9 +1,7 @@
 .info-doctors {
   background-color: $yellow;
 
-  &__inner {
-    background-image: 
-        linear-gradient(90.22deg, #F8C67D 0.21%, rgba(255, 255, 255, 0) 31.72%),
-        url(../../img/bg/scientists.jpg);
+  &__bg {
+    --bg-url: url(../../img/bg/scientists.jpg);
   }
 }

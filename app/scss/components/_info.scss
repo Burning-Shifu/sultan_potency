@@ -47,12 +47,17 @@
   }
 
   &__bg {
+    --color: #F8C67D;
+    --deg: 90deg;
+
     position: absolute;
     right: 0;
     top: 0;
     bottom: 0;
     left: 47%;
-
+    background-image: 
+        linear-gradient(var(--deg), var(--color) 2%, rgba(58, 58, 58, 0) 32%),
+        var(--bg-url);
     background-repeat: no-repeat;
     background-position: 99% 0%, center 55%;
 
@@ -60,6 +65,9 @@
 		  position: relative;
       left: 0;
       height: 365px;
+      background-image: 
+          linear-gradient(0deg, var(--color) 1%, rgba(58, 58, 58, 0) 45%),
+          var(--bg-url);
       background-size: cover;
     }
   }
