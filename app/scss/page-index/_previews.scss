@@ -15,23 +15,40 @@
 
   &__title {
     max-width: 40%;
-    margin: 0 auto 0.42em;
+    margin: 0 auto 0.8em;
     font-size: inherit;
     font-weight: inherit;
     color: $white;
     text-align: center;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include phone {
+      max-width: 100%;
+      margin-bottom: 40px;
+    }
   }
 
   &__list {
     justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__item {
+    --margins: 70px;
+
     position: relative;
-    max-width: calc(100% / 3 - 70px);
+    max-width: calc(100% / 3 - (var(--margins) / 3));
     width: 100%;
-    padding-top: 5.25em; /* 126px */
-    padding-bottom: 0.5em;   /* 12px */
+    padding-top: 126px; /* 126px */
+    padding-bottom: 12px;  
     text-align: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -39,6 +56,20 @@
     border-radius: 20px; 
     box-shadow: 0 0 16px 1px rgba(255, 255, 255, 0.46);
     z-index: 0;
+
+    @include desctop-down {
+      --margins: 60px;
+    }
+
+    @include tablet {
+      max-width: 80%;
+      margin-bottom: 20px;
+      background-position-y: 20%;
+    }
+
+    @include phone {
+      max-width: 100%;
+    }
 
     &::after {
       content: "";
@@ -59,9 +90,15 @@
     display: block;
     max-width: 87%;
     margin: 0 auto;
+    font-size: 24px;
+    line-height: 1.21;
     font-weight: 700;
     color: $text;
     text-transform: uppercase;
+
+    @include phone {
+      font-size: 18px;
+    }
 
     &--small {
       font-size: 0.667em; /*  16px */
