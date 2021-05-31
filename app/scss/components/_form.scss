@@ -1,7 +1,6 @@
 .form {
   max-width: 356px;
   height: fit-content;
-  margin-bottom: 10px;
   padding: 1.25em;
   background-color: $white;
   box-shadow: 0px 4px 50px rgba(136, 136, 136, 0.25);
@@ -9,9 +8,17 @@
 
   &__heading {
     margin: 0;
-    font-size: 0.75em; /* 18px */
+    font-size: 18px; 
     line-height: 1.223;  /* 22px */
     text-align: center;
+
+    @include desctop-down {
+      margin-bottom: 10px;
+    }
+
+    @include phone {
+      font-size: 14px;
+    }
 
     &--bold {
       font-weight: 600;
@@ -26,7 +33,7 @@
 
   &__text {
     font-weight: 600;
-    font-size: 0.5em; /* 12px */
+    font-size: 12px;
     line-height: 1.25; /* 15px */
   }
 
@@ -78,13 +85,17 @@
     width: 100%;
     margin-bottom: 23px;
     padding: 0.53em 0.833em;
-    font-size: 0.75em; /* 18px */
+    font-size: 18px;
     line-height: 1.223;  /* 22px */
     background-color: $grey;
     border: none;
     border-radius: 10px;
     outline: transparent;
     transition: background-color 0.3s, box-shadow 0.5s;
+
+    @include phone {
+      font-size: 16px;
+    }
 
     &::placeholder {
       color: #bebebe;

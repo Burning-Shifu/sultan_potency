@@ -7,6 +7,14 @@
 html {
   box-sizing: border-box;
   font-size: 24px;
+
+  @include desctop-down {
+    font-size: 18px;
+  }
+
+  @include phone {
+		font-size: 14px;
+	}
 }
 
 html,
@@ -37,7 +45,7 @@ body {
 .container {
   max-width: 1310px;
   margin: 0 auto;
-  padding: 0 0.625em;
+  padding: 0 1em;
 
   &--wide {
     max-width: 1400px;
@@ -75,7 +83,7 @@ svg path {
   height: fit-content;
   padding: 1.05em 2.17rem;
   font-weight: 700;
-  font-size: 0.75em;  /* 18px */
+  font-size: 18px;
   line-height: 1.22; /* 22px */
   color: $white;
   text-align: center;
@@ -86,6 +94,10 @@ svg path {
   border: none;
   border-radius: 10px;
   cursor: pointer;
+
+  @include phone {
+    font-size: 16px;
+  }
 }
 
 .title {
@@ -106,24 +118,43 @@ svg path {
     margin-left: auto;
     color: $white;
     font-weight: 600;
+
+    @include phone {
+      font-size: 13px;
+    }
   }
   
   &__check {
     position: relative;
     flex-shrink: 0;
-    width: 94px;
-    height: 74px;
+    width: 3.92em; /* 94px */
+    height: 3.085em;  /* 74px */
     background-image: url(../../img/icons/rectangle-for-check.png);
+    background-repeat: no-repeat;
+
+    @include desctop-down {
+		  background-size: contain;
+    }
 
     &::after {
       content: "";
       position: absolute;
       right: 10px;
       top: 9px;
-      width:48px;
-      height: 41.47px;
+      width: 2em; /* 48px */
+      height: 1.73em; /* 41.47px */
       background-image: url(../../img/icons/check.svg);
       background-repeat: no-repeat;
+
+      @include desctop-down {
+        right: 13px;
+        top: 1px;
+        background-size: contain;
+      }
+
+      @include phone {
+		    right: 7px;
+      }
     }
   }
 }

@@ -10,16 +10,20 @@ $dark-red: #420707;
 
 
 // Адаптив /// 
-@mixin phone {
-  @media (max-width: 400px) { @content; }
-}
+// @mixin phone {
+//   @media (max-width: 400px) { @content; }
+// }
 
-@mixin phone-down {
+@mixin phone {
   @media (max-width: 600px) { @content; }
 }
 
 @mixin tablet {
-  @media (max-width: 960px) { @content; }
+  @media (max-width: 900px) { @content; }
+}
+
+@mixin desctop-down {
+  @media (max-width: 1200px) { @content; }
 }
 
 //Подключение шрифтов
@@ -31,4 +35,20 @@ $dark-red: #420707;
 		font-weight: #{$weight};
 		font-style: #{$style};
 	}
+}
+
+.text {
+
+	@include desctop-down {
+		
+	}
+
+	@include tablet {
+		
+	}
+
+	@include phone {
+		
+	}
+
 }

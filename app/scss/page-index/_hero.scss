@@ -1,27 +1,46 @@
 .hero {
+  
   position: relative;
   padding: 0.835em 0 1.125em;  /* 20px 0  27px */
-  background-color: $dark;
-  background-image: url(../../img/bg/hero.jpg);
+  background-image: 
+  
+  url(../../img/bg/hero.jpg);
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: cover;
+  background-size:  cover;
   z-index: 0;
+    
+  @include phone {
+    background-position-x: 48%;
+    background-size:  260%;
+	}
+  
+  &::after {
+    --rgba-opacity-1: 100%;
+    --rgba-opacity-2: 100%;
 
-  &::after{
     content: "";
     position: absolute;
     right: 0;
     left: 0;
     bottom: 0;
     top: 0;
-    background: 
-        linear-gradient(167.33deg, #1D0707 10.84%, rgba(0, 0, 0, 0) 29.25%), 
-        linear-gradient(74.44deg, #1D0707 12.54%, rgba(0, 0, 0, 0) 40.09%), 
-        linear-gradient(89.58deg, #1D0707 1.37%, rgba(0, 0, 0, 0) 30.77%);
     z-index: -1;
-  }
+    background-image: 
+        linear-gradient(167.33deg, #1D0707 10.84%, rgba(0, 0, 0, 0) 29.25%),
+        linear-gradient(74.44deg, rgba(29, 7, 7, var(--rgba-opacity-1)) 12.54%, rgba(0, 0, 0, 0) 40.09%), 
+        linear-gradient(89.58deg, rgba(29, 7, 7, var(--rgba-opacity-2)) 1.37%, rgba(0, 0, 0, 0) 30.77%);
 
+    @include desctop-down {
+      --rgba-opacity-1: 27%;
+      --rgba-opacity-2: 78%;
+    }
+
+    @include phone {
+      background-image: linear-gradient(123deg, rgba(29, 7, 7, 0.988) 12.84%, rgba(0,0,0,0) 34.25%);
+    }
+  }
+  
   &__inner {
     z-index: 1;
   }
@@ -35,6 +54,14 @@
     line-height: 1.218; /* 78px */
     color: $white;
 
+    @include tablet {
+      max-width: 100%;
+    }
+
+    @include phone {
+      font-size: 1.7em;
+    }
+
     &--beige {
       color: $yellow;
     }
@@ -47,47 +74,83 @@
     font-size: 1.5em; /* 36px */
     line-height: 1.22; /* 44px */
     color: $white;
+
+    @include tablet {
+      max-width: 100%;
+    }
+
+    @include phone {
+      font-size: 0.86em;
+    }
   }
 
   &__bottom {
     justify-content: space-between;
+
+    @include desctop-down {
+      flex-direction: column;
+    }
   }
   
   &__pros {
-    margin-top: 12px;
-    padding-right: 80px;
-    background-image: url(../../img/bg/big-and-small-circles.png);
-    background-position: 110% top;
+    margin-top: 20px;
   }
 
+  
   &__list {
+    flex-direction: column;
     margin-top: 15px;
+
+    @include phone {
+      margin-bottom: 20px;
+    }
   }
   
   &__list-item {
     max-width: 11.8em; /* 280px; */
     margin-bottom: 1.1em;
 
+    @include phone {
+      max-width: 160px;
+      margin-bottom: 1.7em;
+    }
+    
     &--wide {
-      max-width: 380px;
-      max-width: 15.833em;
+      max-width: 13.6em;
     }
-
+    
     &:nth-child(1) {
-      right: -166px;
-    }
+      right: -170px;
 
+      @include phone {
+
+      }
+    }
+    
     &:nth-child(2) {
-      right: -37px;
-    }
+      right: -92px;
 
+      @include phone {
+
+      }
+    }
+    
     &:nth-child(3) {
+      right: -70px;
       margin-bottom: 45px;
+
+      @include phone {
+        margin-bottom: 2em;
+      }
     }
     
     &:last-child {
-      right: -38px;
+      right: -100px;
       margin-bottom: 0;
+
+      @include phone {
+  
+      }
     }
   }
   
@@ -95,10 +158,42 @@
     margin-left: 25px;
   }
 
+  &__img-wrapper {
+    padding-top: 12%;
+    padding-left: 84px;
+    padding-right: 73px;
+    padding-bottom: 120px;
 
-  &__img {    
-    margin-top: 27%;
-    margin-left: 48px;
+    background-image: url(../../img/bg/big-and-small-circles.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+
+    @include tablet {
+		  background-size: contain;
+    }
+
+    @include phone {
+      padding-left: 65px;
+      padding-right: 63px;
+    }
+  }
+  
+  
+  &__img {
+    max-width: 329px;
+    width: 100%;
+    margin-left: 27px;
+
+    @include phone {
+      max-width: 180px;
+    }
+  }
+
+  .form {
+
+    @include desctop-down {
+      margin: 0 auto;
+    }
   }
 }
 

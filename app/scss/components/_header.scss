@@ -4,11 +4,26 @@
     align-items: center;
     padding: 1.25em 4.12em;
     text-align: center;
+
+    @include phone {
+      flex-direction: column;
+      padding-right: 1em;
+      padding-left: 1em;
+    }
   }
 
   &__text {
     max-width: 61%;
     margin: 0;
     font-weight: 600;
+
+    @include phone {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__btn {
+    width: 100%;
   }
 }
