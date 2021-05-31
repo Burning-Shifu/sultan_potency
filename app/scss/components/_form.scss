@@ -3,12 +3,12 @@
   height: fit-content;
   padding: 1.25em;
   background-color: $white;
-  box-shadow: 0px 4px 50px rgba(136, 136, 136, 0.25);
+  box-shadow: 0px 4px 12px rgba(136, 136, 136, 0.25);
   border-radius: 15px;
 
   &__heading {
     margin: 0;
-    font-size: 18px; 
+    font-size: 18px;
     line-height: 1.223;  /* 22px */
     text-align: center;
 

@@ -1,50 +1,118 @@
 .ingredients {
+  --deco-bg-pos-y: 26%;
+
   padding: 2.25em 0 1.9em;
   background-image: url(../../img/bg/order-bg.png), url(../../img/bg/deco.png) ,url(../../img/bg/ingr-bg.png);
   background-repeat: no-repeat;
   background-position-x: center;
-  background-position-y: 0%, 26%, 100%;
-  background-size: auto, 19%, 100%;
-  
-  &__inner {
+  background-position-y: 0%, var(--deco-bg-pos-y), 100%;
+  background-size: auto, 26%, 100%;
+
+  @include desctop-down {
+    --deco-bg-pos-y: 37%;
+	}
+
+  @include tablet {
+    --deco-bg-pos-y: 53%;
+    background-position-x: center, -3%, center;
   }
+
+  @include phone {
+    --deco-bg-pos-y: 49%;
+
+    background-size: 170%, 62%, 100%;
+    background-position-x: center, -60%, center;
+	}
 
   &__top {
     justify-content: space-between;
-    margin-bottom: 1.9em;
+    margin-bottom: 45px;
+
+    @include phone {
+      flex-direction: column;
+      align-items: center;
+    }
   }
-  
+
   &__top-content {
     max-width: 17.5em;
     margin-left: 68px;
     text-align: center;
+
+    @include phone {
+      margin-left: 0;
+      margin-bottom: 50px;
+    }
   }
 
   &__top-text {
     font-weight: 600;
     color: $white;
+
+    @include phone {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
   }
 
   &__top-img {
     width: 170px;
-    margin-top: 44px;
+    margin-top: 1.83em;
   }
-  
+
   &__mid-text {
+    position: relative;
     max-width: 22.6em;
     margin: 0 auto;
     color: $text;
     text-align: center;
-  }
 
-  &__mid-text--bold {
-    font-weight: 900;
+    @include tablet {
+      padding-top: 80px;
+    }
+
+    @include phone {
+      padding-top: 45px;
+    }
+
+    &::after {
+      --width: 6.6em ;  /* 160px */
+
+      content: "";
+      position: absolute;
+      right: 116%;
+      top: -24px;
+      width: var(--width);
+      height: 100px;
+      background-image: url(../../img/two-tabs.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @include tablet {
+        right: calc(50% - (var(--width) / 2));
+        padding-top: 80px;
+      }
+    }
+
+    &--bold {
+      font-weight: 900;
+    }
   }
 
   &__list {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 84px;
+    padding: 0 5px;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include phone {
+      margin-top: 40px;
+    }
   }
 
   &__item {
@@ -52,12 +120,24 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+
     max-width: calc(100% / 2 - 10px);
     margin-bottom: 24px;
     padding: 1.25em 1.5em 1.25em 2.25em; /* 30px 36px 30px 54px */
+
     background-color: $white;
     box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
+
+    @include tablet {
+      max-width: 80%;
+    }
+
+    @include phone {
+      justify-content: flex-start;
+      max-width: 100%;
+      height: 228px;
+    }
 
     &::after {
       content: "";
@@ -65,34 +145,74 @@
       height: 8.67em;  /* 208px */
       background-repeat: no-repeat;
       background-size: contain;
+
+      @include phone {
+        width: 10.7em;
+      }
     }
 
     &--zhen-shen {
+
       &::after {
-        top: -70px;
-        right: -34px;
-        width: 11.46em;  /* 275px */
+        top: -60px;
+        right: -26px;
+        width: 10em;  /* 260px */
         background-image: url(../../img/ingredients/zhen-shen.png);
+
+        @include phone {
+          top: -42px;
+          right: -10px;
+        }
       }
     }
 
     &--muir {
+
+      @include tablet {
+
+        .ingredients__item-title {
+          max-width: 65%;
+        }
+
+        .ingredients__item-descr {
+          max-width: 75%;
+        }
+      }
+
+      @include phone {
+
+        .ingredients__item-descr {
+          max-width: 100%;
+        }
+      }
+
       &::after {
         top: -38px;
-        right: -39px;
-        width: 13.3em;  /* 320px */
+        right: -20px;
+        width: 12em;  /* 288px */
         background-image: url(../../img/ingredients/herbs-raw-muira-puama.png);
+
+        @include phone {
+          top: -3px;
+          right: -10px;
+        }
       }
     }
 
     &--evrikoma {
+
       &::after {
         top: -30px;
         right: -52px;
-        width: 12.75em;  /* 306px */
+        width: 12em;  /* 290px */
         background-image: url(../../img/ingredients/evrikoma.png);
+
+        @include phone {
+          top: -16px;
+          right: -12px;
+        }
       }
-      }
+    }
 
     &--asaya {
 
@@ -101,6 +221,11 @@
         right: -13px;
         width: 9em;  /* 217px */
         background-image: url(../../img/ingredients/acai-berry.png);
+
+        @include phone {
+          top: -42px;
+          right: -20px;
+        }
       }
 
       .ingredients__item-title {
@@ -113,7 +238,7 @@
     display: inline-block;
     max-width: 70%;
     font-weight: 700;
-    font-size: 1.25em;  /* 30px */
+    font-size: 1.28em;  /* 30px */
     line-height: 1.23;  /* 37px */
     text-transform: uppercase;
     color: $red;
@@ -126,10 +251,18 @@
     font-size: 0.75em; /* 18px */
     line-height: 1.22;  /* 22px */
     color: #212121;
+
+    @include tablet {
+      font-size: 14px;
+    }
   }
 
   .form {
     margin-right: 9em;
     margin-bottom: 0;
+
+    @include desctop-down {
+		  margin-right: 0;
+    }
   }
 }
