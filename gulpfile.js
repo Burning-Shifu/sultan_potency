@@ -38,7 +38,7 @@ function html() {
 		.pipe(browsersync.stream())
 }
 
-//Следим за нашим файлом style.scss, конвертируем из него 2 файла css, один обычный, другой минифицированный и закидываем их в папку dist/css///////////////////////////////////////////////////
+//Следим за style.scss, конвертируем из него 2 файла css, один обычный, другой минифицированный и закидываем их в папку dist/css///////////////////////////////////////////////////
 function styles() {
 	return src('app/scss/style.scss')
 		.pipe(scss({
@@ -59,7 +59,7 @@ function styles() {
 		.pipe(browsersync.stream())
 }
 
-//Следим за нашим файлом script.js, конвертируем из него 2 файла js, один обычный, другой минифицированный и закидываем их в папку dist/js///////////////////////////////////////////////////////
+//Следим за script.js, конвертируем из него 2 файла js, один обычный, другой минифицированный и закидываем их в папку dist/js///////////////////////////////////////////////////////
 function scripts() {
 	return src('app/js/**/*.js')
 		.pipe(dest('dist/js/'))
@@ -88,18 +88,7 @@ function stylesLibs() {
 		.pipe(browsersync.stream())
 }
 
-//Собираем все js файлы подключаемых плагинов, конкатинируем их в 1 минифицированный файл js и закидываем его в папку dist/js с именем libs.min.js//////////////////////////////////////////////////
-// function scriptsLibs() {
-// 	return src([
-// 		'node_modules/swiper/swiper-bundle.js',
-// 	])
-// 		.pipe(uglify())
-// 		.pipe(concat('libs.min.js'))
-// 		.pipe(dest('dist/js/'))
-// 		.pipe(browsersync.stream())
-// }
-
-//Следим за всеми файлами jpg, png, svg, gif, ico, webp в папке app/img, конвертируем их в формат webp со сжатием в 70% и закидываем их в папку dist/img. Так же Оригинальные файлы сжимаем до 3 уровня из доступных 7 и отправляем сжатые оригиналы в папку dist/img.///////////////////////////
+//Следим за всеми файлами jpg, png, svg, gif, ico, webp в папке app/img, конвертируем их в формат webp со сжатием в 70% и закидываем их в папку dist/img. Оригинальные файлы сжимаем до 3 уровня из доступных 7 и отправляем сжатые оригиналы в папку dist/img.///////////////////////////
 function images() {
 	return src('app/img/**/*.{jpg,png,svg,gif,ico,webp}')
 		.pipe(webp({
@@ -183,7 +172,6 @@ exports.html = html;
 exports.styles = styles;
 exports.stylesLibs = stylesLibs;
 exports.scripts = scripts;
-// exports.scriptsLibs = scriptsLibs;
 exports.watching = watching;
 exports.browserSync = browserSync;
 exports.clear = clear;
