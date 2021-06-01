@@ -1,20 +1,20 @@
 .hero {
-  
+
   position: relative;
   padding: 0.835em 0 1.125em;  /* 20px 0  27px */
-  background-image: 
-  
+  background-image:
+
   url(../../img/bg/hero.jpg);
   background-repeat: no-repeat;
   background-position: center top;
   background-size:  cover;
   z-index: 0;
-    
+
   @include phone {
     background-position-x: 48%;
     background-size:  260%;
 	}
-  
+
   &::after {
     --rgba-opacity-1: 100%;
     --rgba-opacity-2: 100%;
@@ -26,9 +26,9 @@
     bottom: 0;
     top: 0;
     z-index: -1;
-    background-image: 
+    background-image:
         linear-gradient(167.33deg, #1D0707 10.84%, rgba(0, 0, 0, 0) 29.25%),
-        linear-gradient(74.44deg, rgba(29, 7, 7, var(--rgba-opacity-1)) 12.54%, rgba(0, 0, 0, 0) 40.09%), 
+        linear-gradient(74.44deg, rgba(29, 7, 7, var(--rgba-opacity-1)) 12.54%, rgba(0, 0, 0, 0) 40.09%),
         linear-gradient(89.58deg, rgba(29, 7, 7, var(--rgba-opacity-2)) 1.37%, rgba(0, 0, 0, 0) 30.77%);
 
     @include desctop-down {
@@ -40,7 +40,7 @@
       background-image: linear-gradient(123deg, rgba(29, 7, 7, 0.988) 12.84%, rgba(0,0,0,0) 34.25%);
     }
   }
-  
+
   &__inner {
     z-index: 1;
   }
@@ -91,42 +91,51 @@
       flex-direction: column;
     }
   }
-  
+
   &__pros {
+    justify-content: center;
     margin-top: 20px;
+
+    @include phone {
+      justify-content: space-evenly;
+      margin-top: 0;
+    }
   }
 
-  
+
   &__list {
     flex-direction: column;
     margin-top: 15px;
+
+    @include tablet {
+      margin-left: -84px;
+    }
 
     @include phone {
       margin-bottom: 20px;
     }
   }
-  
+
   &__list-item {
     max-width: 11.8em; /* 280px; */
     margin-bottom: 1.1em;
 
     @include phone {
-      max-width: 160px;
-      margin-bottom: 1.7em;
+      max-width: 124px;
     }
-    
+
     &--wide {
       max-width: 13.6em;
     }
-    
+
     &:nth-child(1) {
       right: -170px;
 
       @include phone {
-
+        right: -90px;
       }
     }
-    
+
     &:nth-child(2) {
       right: -92px;
 
@@ -134,7 +143,7 @@
 
       }
     }
-    
+
     &:nth-child(3) {
       right: -70px;
       margin-bottom: 45px;
@@ -143,19 +152,23 @@
         margin-bottom: 2em;
       }
     }
-    
+
     &:last-child {
       right: -100px;
       margin-bottom: 0;
 
       @include phone {
-  
+
       }
     }
   }
-  
+
   &__check {
     margin-left: 25px;
+
+    @include phone {
+      margin-left: 5px;
+    }
   }
 
   &__img-wrapper {
@@ -173,19 +186,22 @@
     }
 
     @include phone {
-      padding-left: 65px;
-      padding-right: 63px;
+      padding-left: 47px;
+      padding-right: 7px;
+      padding-top: 80px;
+      background-size: 111%;
+      background-position: -55% 43%;
     }
   }
-  
-  
+
+
   &__img {
     max-width: 329px;
     width: 100%;
     margin-left: 27px;
 
     @include phone {
-      max-width: 180px;
+      max-width: 140px;
     }
   }
 
@@ -196,5 +212,3 @@
     }
   }
 }
-
-
