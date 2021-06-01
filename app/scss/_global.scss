@@ -127,7 +127,7 @@ svg path {
       font-size: 13px;
     }
   }
-  
+
   &__check {
     position: relative;
     flex-shrink: 0;
@@ -138,6 +138,11 @@ svg path {
 
     @include desctop-down {
 		  background-size: contain;
+    }
+
+    @include phone {
+		  width: 47px;
+      height: 35px;
     }
 
     &::after {
@@ -157,7 +162,9 @@ svg path {
       }
 
       @include phone {
-		    right: 7px;
+		    right: 11px;
+        width: 23px;
+        height: 20px;
       }
     }
   }
